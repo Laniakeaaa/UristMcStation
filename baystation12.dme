@@ -3000,7 +3000,6 @@
 #include "code\modules\urist\items\clothes\uristclothes.dm"
 #include "code\modules\urist\items\improvised\ghettobomb.dm"
 #include "code\modules\urist\items\improvised\improv-armour.dm"
-#include "code\modules\urist\items\improvised\improv-chem+med.dm"
 #include "code\modules\urist\items\improvised\improv-clothing.dm"
 #include "code\modules\urist\items\improvised\improv-structures.dm"
 #include "code\modules\urist\items\improvised\improv-tools.dm"
