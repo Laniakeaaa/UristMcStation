@@ -376,5 +376,38 @@
 	item_state = "spearglass[wielded]"
 	return
 
+// Prisoner/Stowaway Knowledge
+
+// Trench-Club
+/obj/item/weapon/melee/trench_club
+	name = "trench club"
+	desc = "A very nasty looking club, designed for close quarters fighting."
+	icon = ''
+	icon_state = ''
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+	slot_flags = SLOT_BELT
+	w_class = 3.0
+	force = 15 // For now.
+	default_material = "steel"
+	applies_material_colour = 0
+	attack_verb = list("bludgeoned", "bashed","smashed")
+	// Add craft flag here
+
+// Molotov Cocktail
+/obj/item/weapon/grenade/molotov
+	name = "Molotov Cocktail"
+	desc = "A commonly made improvised incindery device for burning tanks and people alike."
+	icon = '' // Below.
+	icon_state = '' // Sort out how we are gonna modularize this...
+
+/* TODO:
+
+Balancing for Molotov - Needs to be not so OP, as booze is super easy to get, maybe a decent storage limit - Also, do we want a fuse like a regular molotov? They do explode if you don't throw them eventually.
+Balance Trench Clubby
+Get throwing + lighting code working for Molotov, look into how we can modularize this, as I'm not making a fucking sprite for every single booze-bottle that gets added.
+Spriting as always.
+
+*/
+
 //end Urist stuff
 
