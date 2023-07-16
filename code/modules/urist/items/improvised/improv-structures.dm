@@ -5,21 +5,21 @@
 /obj/structure/improvised/leanto
 	name = "Lean-To"
 	desc = "A comfy looking lean-to, likely found in a dark corner of maintenance."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 /obj/structure/bed/strawbedroll
 	name = "straw bedroll"
 	desc = "A crudely made bedroll made of straw, it's itchy."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 
 /obj/structure/bed/leatherbedroll
 	name = "leather bedroll"
 	desc = "A crudely made bedroll made of leather."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 
 // Traps
@@ -29,8 +29,8 @@
 /obj/effect/tripwire
 	name = "Tripwire"
 	desc = "A tripwire needing to be set."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 	anchored = 0
 	var/armed = 0
 	var/loaded = "explode" // If loaded, call this proc to make the boom go boom boom.

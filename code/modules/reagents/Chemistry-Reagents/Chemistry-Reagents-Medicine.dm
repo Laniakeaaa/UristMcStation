@@ -959,3 +959,17 @@
 	if(do_giggle && prob(20))
 		M.emote(pick("giggle", "laugh"))
 	M.add_chemical_effect(CE_PULSE, -1)
+
+/datum/reagent/fortis // Anti-Toxin, Mild Deliriant
+	name = "fortis"
+	description = "A substance made of refined ethanol and specific maintenance fungus."
+	taste_description = "burning liquor"
+	color = "#498109"
+	reagent_state = LIQUID
+
+/datum/reagent/cushion // Painkiller, Causes Stumbling and Stuttering.
+	name = "cushion"
+	description = "A mixture containing specific fungal and bacterial colonies of wallrot, mixed with ethanol."
+	taste_description = "rusty mushrooms"
+	color = "#9f6e23"
+	reagent_state = LIQUID

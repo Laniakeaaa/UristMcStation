@@ -382,14 +382,12 @@
 /obj/item/weapon/melee/trench_club
 	name = "trench club"
 	desc = "A very nasty looking club, designed for close quarters fighting."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
 	w_class = 3.0
 	force = 15 // For now.
-	default_material = "steel"
-	applies_material_colour = 0
 	attack_verb = list("bludgeoned", "bashed","smashed")
 	// Add craft flag here
 
@@ -397,8 +395,8 @@
 /obj/item/weapon/grenade/molotov
 	name = "Molotov Cocktail"
 	desc = "A commonly made improvised incindery device for burning tanks and people alike."
-	icon = '' // Below.
-	icon_state = '' // Sort out how we are gonna modularize this...
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'// Sort out how we are gonna modularize this...
 
 /* TODO:
 

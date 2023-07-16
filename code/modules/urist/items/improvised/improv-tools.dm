@@ -9,88 +9,88 @@
 // ok so let's go through this, we need a couple different ways to screw open a panel in ss13 logic.  coin driver, file-driver (need metal - lasts longer),
 
 
-/obj/item/weapon/screwdriver/makeshift/filedriver
-	name "makeshift file-driver"
+/obj/item/weapon/screwdriver/makeshift/metaldriver
+	name = "makeshift metaldriver"
 	desc = "A crudely made piece of metal shaped roughly in the shape of a screwdriver, it looks fairly strong."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 /obj/item/weapon/screwdriver/makeshift/coindriver
-	name = "coin-driver"
+	name = "crude coindriver"
 	desc = "A small bit of wire wrapped around a coin for extra grip, this looks pretty flimsy, but could open a panel in a pinch."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 /obj/item/weapon/screwdriver/makeshift/pendriver
-	name = "Pen-driver"
+	name = "crude pendriver"
 	desc = "A piece of molded plastic, shaped in the style of a modern screwhead."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 // Welders
 
 /obj/item/weapon/weldingtool/makeshift
 	name = "makeshift welder"
 	desc = "A makeshift welder, hobbled together from a few electronic parts, it doesn't look like it holds much charge, but you could probably do some light repair work with this."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 // Wrenches
 /obj/item/weapon/wrench/makeshift/ducttape
 	name = "makeshift duct wrench"
 	desc = "A makeshift wrench, made of duct-tape, that will fit across a bolt and turn it. This is pretty flimsy."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 /obj/item/weapon/wrench/makeshift/scrapwrench
 	name = "crude metal wrench"
 	desc = "A very crude wrench, made of bashed together metal and held together with wiring. It looks fairly strong."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 // Wirecutters
 
 /obj/item/weapon/wirecutter/makeshift
 	name = "crude wirecutters"
 	desc = "A very crude pair of wirecutters, hobbled together from two sharp implements, you could use this for cutting wires."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 // Crowbars
 
 /obj/item/weapon/crowbar/makeshift
 	name = "crude prybar"
 	desc = "A rough piece of metal bashed into the shape of a prybar, you could use this to pry open or dismantle various objects. It looks vaguely strong."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 // Item "Tools"
 
 /obj/item/weapon/reagent_containers/food/drinks/crudecanteen
 	name = "crude water canteen"
 	desc = "A water vessel tied together with some cable coil to fit easily inside of a belt."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 /obj/item/weapon/reagent_containers/food/drinks/waterskin
 	name = "waterskin"
 	desc = "A water vessel made out of leather with a removable cap for easy drinking."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 // Item "Trap Ingredients"
 
 /obj/item/weapon/tripwirehook
 	name = "tripwire hook"
 	desc = "Part of a tripwire system for passively triggering some sort of alert or payload."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 /obj/item/weapon/caltrops
 	name = "caltrops"
 	desc = "Small sharp metal spikes, commonly used for cavalary, now used for man. Won't cause much of an injury, but certain to slow people down."
-	icon = ''
-	icon_state = ''
+	icon_state = "test"
+	icon = 'icons/urist/test.dmi'
 
 
 /* TODO:

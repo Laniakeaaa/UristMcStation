@@ -2972,3 +2972,10 @@
 
 	glass_name = "horchata"
 	glass_desc = "A lovely looking horchata del chufa."
+
+/datum/reagent/brougt // Booze, helps make your liver no longer live.
+	name = "brougt"
+	description = "A mixture of welding fuel and fluorophores."
+	taste_description = "rotten teeth"
+	color = "#412506"
+	reagent_state = LIQUID
