@@ -7,7 +7,7 @@
 #define CALIBER_RIFLE			"7.62mm"
 #define CALIBER_RIFLE_MILITARY  "5.56mm"
 #define CALIBER_ANTIMATERIAL    "14.5"
-#define CALIBER_ELEPHANT_GUN	".700 Nitro Express"
+#define CALIBER_NITRO_EXPRESS	".700 Nitro Express"
 
 #define CALIBER_SHOTGUN			"12g"
 #define CALIBER_GYROJET			"20mmG"

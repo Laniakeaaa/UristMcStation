@@ -78,3 +78,11 @@ icon_override sprites go to 'icons/uristmob/shoes.dmi' Items should go to clothi
 	force = 0
 	w_class = ITEM_SIZE_SMALL
 	species_restricted = null
+
+/obj/item/storage/clothing/shoes/urist/hollow_shoes
+	name = "shoes"
+	desc = "A pair of black shoes."
+	max_w_class = ITEM_SIZE_SMALL
+	storage_slots = 2
+	icon = 'icons/obj/clothing/obj_feet.dmi'
+	icon_state = "black"

@@ -161,9 +161,27 @@
 /obj/item/ammo_magazine/speedloader/clip/sks
 	name = "10 round rifle stripper clip"
 	desc = "A 10 round stripper clip for rifle caliber weapons."
+	icon = 'icons/urist/items/ammo.dmi'
 	icon_state = "clip"
 	caliber = CALIBER_RIFLE
 	ammo_type = /obj/item/ammo_casing/rifle
 	matter = list(MATERIAL_STEEL = 3000)
 	max_ammo = 10
 	multiple_sprites = 1
+
+/obj/item/ammo_casing/nitro_express
+	name = "nitro express casing"
+	desc = "A .700 nitro express cartridge, used in a nitro express rifle."
+	caliber = CALIBER_NITRO_EXPRESS
+	projectile_type = /obj/item/projectile/bullet/nitro_express
+	icon = 'icons/urist/items/ammo.dmi'
+	icon_state = "nitro"
+	spent_icon = "nitro-spent"
+	matter = list(MATERIAL_STEEL = 500)
+
+/obj/item/projectile/bullet/nitro_express
+	fire_sound = 'sound/urist/nitroexpressfire.ogg'
+	damage = 70
+	stun = 5
+	weaken = 5
+	distance_falloff = 0.3 // Loses 30% of damage over distance, no wall penetration abilities.

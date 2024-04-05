@@ -952,8 +952,8 @@ the sprite and make my own projectile -Glloyd*/
 /obj/item/gun/projectile/sks
 	name = "surplus semi-automatic rifle"
 	desc = "An ancient surplus rifle labelled 'Samozaryadny Karabin Simonova', people still use these, hundreds of years later, often still found mummified in cosmoline. Great for arming your fellow comrades. It takes 7.62 stripper clips."
-///	icon = ''
-//	icon_state = ""
+	icon = 'icons/urist/items/guns.dmi'
+	icon_state = "sks"
 	force = 10
 	w_class = ITEM_SIZE_LARGE
 	caliber = CALIBER_RIFLE
@@ -961,22 +961,19 @@ the sprite and make my own projectile -Glloyd*/
 	handle_casings = EJECT_CASINGS
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
 	max_shells = 10
-//	fire_sound = //sound here
 	jam_chance = 0
 	one_hand_penalty = 4
-
-
-
 
 /obj/item/gun/projectile/nitroexpress
 	name = "nitro express rifle"
 	desc = "A huge hunting rifle chambered in .700 Nitro Express, hence the name. Able to put down just about anything in existence, provided you can handle the recoil."
-//	icon = ''
-//	icon_state = ""
-//	wielded_item_state = ""
+	icon = 'icons/urist/items/guns.dmi'
+	icon_state = "nitro"
+	item_icons = URIST_ALL_ONMOBS
+	wielded_item_state = "dshotgun-wielded"
 	w_class = ITEM_SIZE_HUGE
 	force = 10
-	caliber = CALIBER_ELEPHANT_GUN
+	caliber = CALIBER_NITRO_EXPRESS
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 1)
 	fire_sound = 'sound/urist/nitroexpressfire.ogg'
 	jam_chance = 0
@@ -986,10 +983,27 @@ the sprite and make my own projectile -Glloyd*/
 	max_shells = 2
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BACK
-//	ammo_type = //NITRO HERE
+	ammo_type = /obj/item/ammo_casing/nitro_express
 	burst_delay = 0
-	screen_shake = 2
+	screen_shake = 4
 	firemodes = list(
 		list(mode_name="fire one barrel at a time", burst=1),
 		list(mode_name="fire both barrels at once", burst=2),
 		)
+
+/obj/item/gun/projectile/derringer
+	name = "concealed derringer pistol"
+	desc = "A small, easily concealed derringer pistol. It's a two-shot, break-action weapon, chambered in 9MM, easily concealable."
+	icon = 'icons/urist/items/guns.dmi'
+	icon_state = "derringer"
+	item_flags = ITEM_FLAG_CAN_HIDE_IN_SHOES
+	w_class = ITEM_SIZE_SMALL
+	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
+	jam_chance = 0
+	load_method = SINGLE_CASING
+	max_shells = 2
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+	slot_flags = SLOT_BELT | SLOT_HOLSTER | SLOT_TIE
+	burst_delay = 0
+	caliber = CALIBER_PISTOL_SMALL
+	ammo_type = /obj/item/ammo_casing/pistol/small
