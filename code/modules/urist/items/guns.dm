@@ -948,3 +948,48 @@ the sprite and make my own projectile -Glloyd*/
 	desc = "a pre-Crisis model laser carbine formerly deployed broadly by human forces."
 	icon = 'icons/urist/items/guns.dmi'
 	icon_state = "oldlaser"
+
+/obj/item/gun/projectile/sks
+	name = "surplus semi-automatic rifle"
+	desc = "An ancient surplus rifle labelled 'Samozaryadny Karabin Simonova', people still use these, hundreds of years later, often still found mummified in cosmoline. Great for arming your fellow comrades. It takes 7.62 stripper clips."
+///	icon = ''
+//	icon_state = ""
+	force = 10
+	w_class = ITEM_SIZE_LARGE
+	caliber = CALIBER_RIFLE
+	load_method = SINGLE_CASING|SPEEDLOADER
+	handle_casings = EJECT_CASINGS
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
+	max_shells = 10
+//	fire_sound = //sound here
+	jam_chance = 0
+	one_hand_penalty = 4
+
+
+
+
+/obj/item/gun/projectile/nitroexpress
+	name = "nitro express rifle"
+	desc = "A huge hunting rifle chambered in .700 Nitro Express, hence the name. Able to put down just about anything in existence, provided you can handle the recoil."
+//	icon = ''
+//	icon_state = ""
+//	wielded_item_state = ""
+	w_class = ITEM_SIZE_HUGE
+	force = 10
+	caliber = CALIBER_ELEPHANT_GUN
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 1)
+	fire_sound = 'sound/urist/nitroexpressfire.ogg'
+	jam_chance = 0
+	one_hand_penalty = 10
+	load_method = SINGLE_CASING|SPEEDLOADER
+	handle_casings = CYCLE_CASINGS
+	max_shells = 2
+	obj_flags =  OBJ_FLAG_CONDUCTIBLE
+	slot_flags = SLOT_BACK
+//	ammo_type = //NITRO HERE
+	burst_delay = 0
+	screen_shake = 2
+	firemodes = list(
+		list(mode_name="fire one barrel at a time", burst=1),
+		list(mode_name="fire both barrels at once", burst=2),
+		)

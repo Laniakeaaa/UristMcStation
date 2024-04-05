@@ -84,3 +84,9 @@
 	great for stashing your stolen goods. Comes with a crowbar and a floor tile."
 	item_cost = 20
 	path = /obj/item/storage/backpack/satchel/flat
+
+/datum/uplink_item/item/stealth_items/hollow_shoes
+	name = "Smuggler's Shoes"
+	desc = "This shoe has a hidden compartment in it's sole, useful for carrying two small items \
+	while looking discreet, great for getting you out of a cell, or carrying extra gear."
+	item_cost = 12

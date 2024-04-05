@@ -67,3 +67,8 @@
 	desc = "A cane used by true gentlemen, especially ones with a penchant for loud weaponry!"
 	item_cost = 25
 	path = /obj/item/gun/projectile/shotgun/cane
+
+/datum/uplink_item/item/stealthy_weapons/derringer
+	name = "Concealed Derringer Pistol"
+	desc = "A derringer pocket pistol, loaded with .45 ACP. Can be stored in pockets, attached as an accessory, etc. Comes preloaded with two shots."
+	item_cost = 14 // It's .45, but you have two shots, and will either need to hack a lathe or buy another.

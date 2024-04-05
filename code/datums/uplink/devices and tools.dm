@@ -183,3 +183,15 @@
 	desc = "A single-use device that removes the Clumsy mutation when activated."
 	item_cost = 16
 	path = /obj/item/device/uplink_service/declumsifier
+
+/datum/uplink_item/item/tools/syndicate_special_sauce
+	name = "Syndicate Special Sauce"
+	desc = "A single packet of sauce, containing a slow acting poison which will cause a sudden heart attack after a few minutes."
+	//path
+	item_cost = 12
+
+/datum/uplink_item/item/tools/portablecooler
+	name = "Portable Suit Cooling Unit"
+	desc = "A portable suit cooling unit, useful for synthetic or FBPs using hardsuits."
+	item_cost = 12
+	path = /obj/item/device/suit_cooling_unit

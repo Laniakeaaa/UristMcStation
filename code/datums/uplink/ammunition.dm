@@ -130,7 +130,18 @@
 	path = /obj/item/ammo_magazine/box/emp/smallpistol
 
 /datum/uplink_item/item/ammo/stripperclip
-	name = "Stripper Clip"
+	name = "7.62x39mm (5 Round) Stripper Clip"
 	desc = "A stripper clip used to load bolt action rifles. Contains just 5 rounds."
 	item_cost = 2
 	path = /obj/item/ammo_magazine/speedloader/clip
+
+/datum/uplink_item/item/ammo/stripperclip
+	name = "7.62x39mm (10 Round) Stripper Clip"
+	desc = "A stripper clip used to load semi-automatic surplus rifles. Contains just 10 rounds."
+	item_cost = 4
+	path = /obj/item/ammo_magazine/speedloader/clip
+
+/datum/uplink_item/item/ammo/nitroexpress
+	name = ".700 Nitro Express Rounds"
+	desc = "A box of .700 Nitro Express ammo, for the Nitro Express Rifle. Contains just two rounds."
+	item_cost = 10

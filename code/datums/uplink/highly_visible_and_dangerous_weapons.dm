@@ -227,3 +227,17 @@
 	desc = "Ion rifle in compact form."
 	item_cost = 36	// TC in line with Magnums/Heavy .44's, to reflect it's nuking capability on Synths.
 	path = /obj/item/gun/energy/ionrifle/small
+
+/datum/uplink_item/item/visible_weapons/elephantgun // We are going big game hunting
+	name = "Nitro Express Rifle"
+	desc = "An insanely powerful break-action rifle, designed for hunting the rare illusive space elephant. Chambered in .700 Nitro Express, the stopping power \
+			is enough to put down any heavy animal, or unlucky assistant, provided you can handle the intense recoil. "
+	item_cost = 100
+	// path
+
+/datum/uplink_item/item/visible_weapons/sks
+	name = "Semi Automatic Rifle"
+	desc = "An ancient surplus rifle labelled 'Samozaryadny Karabin Simonova', people still use these, hundreds of years later, often still found mummified in cosmoline. Great for arming your fellow comrades. It takes 7.62 stripper clips."
+	item_cost = 24
+	antag_roles = list(MODE_REVOLUTIONARY)
+	//path

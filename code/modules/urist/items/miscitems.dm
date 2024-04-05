@@ -872,3 +872,47 @@
 		user.drop_from_inventory(src)
 		to_chat(user, SPAN_NOTICE("You take \the [new_armor] out of \the [src]. Remember to put an armor plate in!"))
 		qdel(src)
+
+/obj/item/toy/magic8ball //Urist Specific 8-Ball
+	name = "magic 8-ball"
+	desc = "A novelty fortune telling toy that can be shaken for a random answer."
+	icon = 'icons/obj/toy.dmi'
+	icon_state = "eightball"
+	var/cooldown = 0
+	var/audio_files = list("sound/urist/8ball.ogg")
+	var/static/list/answers = list(
+		"It is certain",
+		"It is decidely so",
+		"Without a doubt",
+		"Yes definitely",
+		"You may rely on it",
+		"As I see it, yes",
+		"Most likely",
+		"Outlook good",
+		"Yes",
+		"Signs point to yes",
+		"Reply hazy, try again",
+		"Ask again later",
+		"Better not tell you now",
+		"Cannot predict now",
+		"Concentrate and ask again",
+		"Don't count on it",
+		"My reply is no",
+		"My sources say no",
+		"Outlook not so good",
+		"Very doubtful"
+	)
+
+/obj/item/toy/magic8ball/attack_self(mob/user)
+	if (cooldown == 0)
+		cooldown = 1
+		user.visible_message(SPAN_NOTICE("\The [user] shakes \the [src] for a moment, and it says, \"[pick(answers) ].\""))
+		playsound(src.loc, pick(src.audio_files), 50, 1)
+		src.add_fingerprint(user)
+		cooldown = 0
+	return
+
+/obj/item/toy/magic8ball/afterattack(obj/O, mob/user, proximity)
+	. = ..()
+	if (proximity)
+		visible_message(SPAN_WARNING("\The [src] says, \"[pick(answers) ]\" as it hits \the [O]!"))

@@ -157,3 +157,13 @@
 	icon = 'icons/urist/items/ammo.dmi'
 	icon_state = "lcasing"
 	spent_icon = "lcasing-spent"
+
+/obj/item/ammo_magazine/speedloader/clip/sks
+	name = "10 round rifle stripper clip"
+	desc = "A 10 round stripper clip for rifle caliber weapons."
+	icon_state = "clip"
+	caliber = CALIBER_RIFLE
+	ammo_type = /obj/item/ammo_casing/rifle
+	matter = list(MATERIAL_STEEL = 3000)
+	max_ammo = 10
+	multiple_sprites = 1

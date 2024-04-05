@@ -41,6 +41,12 @@
 	item_cost = DEFAULT_TELECRYSTAL_AMOUNT
 	path = /obj/item/reagent_containers/food/snacks/fortunecookie
 
+/datum/uplink_item/item/badassery/magic8ball
+	name = "Magic 8-Ball"
+	desc = "A toy fortune telling device, that will give you a random answer when shaken."
+	item_cost = 30
+	path = /obj/item/toy/magic8ball
+
 /**************
 * Random Item *
 **************/
