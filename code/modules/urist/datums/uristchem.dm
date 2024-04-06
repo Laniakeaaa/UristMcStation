@@ -53,4 +53,5 @@
 			M.custom_emote(2, "gasps!")
 		return
 
-	M.take_organ_damage(5 * removed, 0, ORGAN_DAMAGE_FLESH_ONLY)
+	var/obj/item/organ/internal/heart = M.internal_organs_by_name[BP_HEART]
+	heart.take_internal_damage(heart.max_damage * 0.075)
