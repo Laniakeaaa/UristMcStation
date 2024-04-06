@@ -241,3 +241,11 @@
 	item_cost = 24
 	antag_roles = list(MODE_REVOLUTIONARY)
 	path = /obj/item/gun/projectile/sks
+
+/*
+/datum/uplink_item/item/visible_weapons/hush22
+	name = "Hush .22 Assassin Pistol"
+	desc = "An integrally surpressed .22 assassin pistol with hollow point rounds."
+	item_cost = 30
+	path = /obj/item/weapon/gun/projectile/hush22
+*/

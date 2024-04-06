@@ -185,3 +185,48 @@
 	stun = 5
 	weaken = 5
 	distance_falloff = 0.3 // Loses 30% of damage over distance, no wall penetration abilities.
+
+/obj/item/ammo_casing/r22lr
+	name = ".22LR round"
+	desc = "A .22LR round"
+	caliber = "22LR"
+	projectile_type = /obj/item/projectile/bullet/r22lr
+
+/obj/item/ammo_casing/r22lr/hp
+	name = ".22HP round"
+	desc = "A .22 hollow point round"
+	caliber = "22HP"
+	projectile_type = /obj/item/projectile/bullet/r22lr/r22hp
+
+/obj/item/ammo_casing/flare_shot
+	name = "flare shell"
+	desc = "A shell containing a highly incandescent flare."
+	caliber = "flareshell"
+	projectile_type = /obj/item/projectile/bullet/r22lr/r22hp
+
+/obj/item/projectile/bullet/r22lr //22 Long Rifle (For Rifles and Pistols)
+	damage = 15
+	distance_falloff = 5
+
+/obj/item/projectile/bullet/r22lr/r22hp // 22 Hollow Point.
+	damage = 28
+	armor_penetration = 10
+	distance_falloff = 5
+
+/obj/item/projectile/flareshell
+	name = "flare shell"
+	fire_sound = 'sound/urist/weapons/grenade_bloop.ogg'
+	damage = 10
+
+/obj/item/ammo_magazine/r22lr/pistol
+	name = "pistol magazine (.22LR)"
+	desc = "A .22LR magazine for a pistol."
+	icon = 'icons/urist/items/ammo.dmi'
+	icon_state = "9mmds" // Replace
+	mag_type = MAGAZINE
+	ammo_type = /obj/item/projectile/bullet/r22lr
+	matter = list(MATERIAL_STEEL = 900)
+	caliber = "22LR"
+	max_ammo = 10
+
+// Lets organize this cluster fuck later, bud

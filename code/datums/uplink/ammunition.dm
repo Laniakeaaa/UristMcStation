@@ -146,3 +146,8 @@
 	desc = "A box of .700 Nitro Express ammo, for the Nitro Express Rifle. Contains just two rounds."
 	item_cost = 10
 	path = /obj/item/ammo_casing/nitro_express
+
+/datum/uplink_item/item/ammo/22hp
+	name = ".22 Pistol Magazine (Hollow Point)"
+	item_cost = 6
+	path = /obj/item/ammo_magazine/r22lr/pistol/hollowpoint

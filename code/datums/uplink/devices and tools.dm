@@ -144,12 +144,13 @@
 	item_cost = 52
 	path = /obj/item/supply_beacon
 
-/datum/uplink_item/item/tools/camera_mask
+/*/datum/uplink_item/item/tools/camera_mask    // Replaced with Urist Specific implant, but kept to not fuck merge. - Y
 	name = "Camera MIU"
 	desc = "Wearing this mask allows you to remotely view any cameras you currently have access to. Take the mask off to stop viewing."
 	item_cost = 32
 	antag_costs = list(MODE_MERCENARY = 30)
 	path = /obj/item/clothing/mask/ai
+*/
 
 /datum/uplink_item/item/tools/interceptor
 	name = "Radio Interceptor"
@@ -177,12 +178,6 @@
 	item_cost = 5
 	path = /obj/item/storage/box/handcuffs
 	desc = "A box of 7 handcuffs."
-
-/datum/uplink_item/item/tools/declumsifier
-	name = "De-Clumsy Device"
-	desc = "A single-use device that removes the Clumsy mutation when activated."
-	item_cost = 16
-	path = /obj/item/device/uplink_service/declumsifier
 
 /datum/uplink_item/item/tools/syndicate_special_sauce
 	name = "Syndicate Special Sauce"

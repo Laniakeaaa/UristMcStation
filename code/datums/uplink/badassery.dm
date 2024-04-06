@@ -47,6 +47,12 @@
 	item_cost = 30
 	path = /obj/item/toy/magic8ball
 
+/datum/uplink_item/item/badassery/ancienttoolbox
+	name = "Ancient Toolbox"
+	desc = "An ancient dusty red toolbox. It looks very robust. Only a true greytider could use this."
+	item_cost = 32
+	path = /obj/item/storage/toolbox/ancienttoolbox
+
 /**************
 * Random Item *
 **************/

@@ -39,8 +39,11 @@
 /datum/uplink_category/medical
 	name = "Medical & Food"
 
-/datum/uplink_category/hardsuit_modules
+/* /datum/uplink_category/hardsuit_modules   Commented out, easily revertable for merge.
 	name = "Hardsuit Modules"
+*/
+/datum/uplink_category/rig_modules
+	name = "RIG Modules"
 
 /datum/uplink_category/services
 	name = "Jamming & Announcements"
@@ -50,3 +53,6 @@
 
 /datum/uplink_category/telecrystals
 	name = "Telecrystal Materialization"
+
+/datum/uplink_category/reagents_and_plants
+	name = "Reagents & Plants"

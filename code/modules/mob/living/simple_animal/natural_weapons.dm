@@ -83,3 +83,6 @@
 
 /obj/item/natural_weapon/giant
 	force = 30
+
+/obj/item/natural_weapon/bite/immense
+	force = 35

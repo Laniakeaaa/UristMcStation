@@ -73,3 +73,9 @@
 	desc = "A derringer pocket pistol, loaded with 9MM. Can be stored in pockets, hidden in shoes, etc. Comes preloaded with two shots."
 	item_cost = 14 // It's .45, but you have two shots, and will either need to hack a lathe or buy another.
 	path = /obj/item/gun/projectile/derringer
+
+/datum/uplink_item/item/stealthy_items/pen_dagger
+	name = "Holdout Dagger"
+	desc = "A discreet pen-dagger that can switch between writing and stabbing, thus mightier than the sword. It won't do a huge of damage, but it's better than nothing."
+	item_cost = 10
+	path = /obj/item/pen/dagger
