@@ -22,14 +22,14 @@
 	..()
 	M.adjustBrainLoss(0.1)
 
-/datum/reagent/toxin/dropwort //
+/datum/reagent/toxin/dropwort //Syndicate Special Sauce, sorry Socrates. Doesn't engage until metabolized.
 	name = "Dropwort"
-	description = "A powerful cardiovascular toxicant, it metabolizes slowly before causing huge heart damage. It is derived from hemlock water-dropwort. "
+	description = "A powerful cardiovascular toxicant, it metabolizes slowly before causing huge heart damage. It is derived from hemlock water-dropwort."
 	taste_description = "sweet"
 	reagent_state = LIQUID
 	color = "#e8e8e8"
 
-/datum/reagent/toxin/oenanthotoxin
+/datum/reagent/toxin/oenanthotoxin // This isn't the exact same as typical hemlock poisoning, it's disguised a little before it kicks in - Yantari
 	name = "Oenanthotoxin"
 	description = "A toxin metabolized from dropwort, it causes severe cardiovascular damage and acts is metabolized quickly and painfully. "
 	taste_description = "plesantly sweet"
@@ -38,29 +38,19 @@
 	color = "#d1b228"
 	strength = 35
 
-/datum/reagent/toxin/oenanthotoxin/affect_blood(mob/living/carbon/M, removed)
+/datum/reagent/toxin/oenanthotoxin/affect_blood(mob/living/carbon/M, removed) // We start with mimicking symptoms, keeping it subtle, then we make it worst.
 	if (IS_METABOLICALLY_INERT(M))
 		return
 // FIX THIS LATER
 	if(M.chem_doses[/datum/reagent/toxin/oenanthotoxin] > 0)
-		M.reagents.add_reagent(/datum/reagent/toxin/amaspores, metabolism) // The spores lay dormant for as long as any traces of amatoxin remain
+		M.reagents.add_reagent(/datum/reagent/toxin/amaspores, metabolism) // Similar to how amatoxin works, just more deadly.
 		if (prob(5))
-			to_chat(M, SPAN_DANGER("Everything itches, how uncomfortable!"))
+			to_chat(M, SPAN_DANGER("You feel antsy, your concentration wavers...")) // At the start, try to mimic nicotines messages
 		if (prob(10))
-			to_chat(M, SPAN_WARNING("Your eyes are watering, it's hard to see!"))
-			M.eye_blurry = max(M.eye_blurry, 10)
+			to_chat(M, SPAN_WARNING("You feel invigorated and oddly calm.")) // Similar message to nicotine still, but slightly off.
 		if (prob(10))
-			to_chat(M, SPAN_DANGER("Your throat itches uncomfortably!"))
-			M.custom_emote(2, "coughs!")
+			to_chat(M, SPAN_DANGER("Your heart feels like it's working a lot harder than usual.")) // Clear indication to your heart.
+			M.custom_emote(2, "gasps!")
 		return
 
-	M.add_chemical_effect(CE_SLOWDOWN, 1)
-
-	if (prob(15))
-		M.Weaken(5)
-		M.add_chemical_effect(CE_VOICELOSS, 5)
-	if (prob(30))
-		M.eye_blurry = max(M.eye_blurry, 10)
-
-	M.take_organ_damage(3 * removed, 0, ORGAN_DAMAGE_FLESH_ONLY)
-	M.adjustToxLoss(5 * removed, 0, ORGAN_DAMAGE_FLESH_ONLY)
+	M.take_organ_damage(5 * removed, 0, ORGAN_DAMAGE_FLESH_ONLY)
