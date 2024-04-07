@@ -294,4 +294,4 @@ Please keep it tidy, by which I mean put comments describing the item before the
 	speak = list("BEWARE, I LIVE!","RUN COWARD!", "I HUNGER!", "RAAAAAAAAAAARGH!!")
 /datum/ai_holder/simple_animal/man_eater
 	speak_chance = 5
-	aggro_sound = list('sound/urist/maneater_01.ogg', 'sound/urist/maneater_02.ogg', 'sound/urist/maneater_03.ogg', 'sound/urist/maneater_04.ogg')
+	aggro_sound = list('sound/urist/maneater_01.ogg')

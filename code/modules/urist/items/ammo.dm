@@ -213,11 +213,6 @@
 	armor_penetration = 10
 	distance_falloff = 5
 
-/obj/item/projectile/flareshell
-	name = "flare shell"
-	fire_sound = 'sound/urist/weapons/grenade_bloop.ogg'
-	damage = 10
-
 /obj/item/ammo_magazine/r22lr/pistol
 	name = "pistol magazine (.22LR)"
 	desc = "A .22LR magazine for a pistol."

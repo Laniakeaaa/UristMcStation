@@ -147,7 +147,7 @@
 	item_cost = 10
 	path = /obj/item/ammo_casing/nitro_express
 
-/datum/uplink_item/item/ammo/22hp
+/datum/uplink_item/item/ammo/hollowpoint
 	name = ".22 Pistol Magazine (Hollow Point)"
 	item_cost = 6
 	path = /obj/item/ammo_magazine/r22lr/pistol/hollowpoint
