@@ -33,6 +33,7 @@ var/global/datum/uplink/uplink = new()
 	var/list/antag_costs = list()			// Allows specific antag roles to purchase at a different cost
 	var/datum/uplink_category/category		// Item category
 	var/list/datum/antagonist/antag_roles	// Antag roles this item is displayed to. If empty, display to all. If it includes 'Exclude", anybody except this role can view it
+	var/list/datum/antagonist/job_roles 	// Job-specific roles these items are displayed to.
 
 /datum/uplink_item/item
 	var/path = null
