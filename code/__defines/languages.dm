@@ -7,6 +7,7 @@
 #define LANGUAGE_HUMAN_INDIAN    "New Dehlavi"
 #define LANGUAGE_HUMAN_IBERIAN   "Iberian"
 #define LANGUAGE_HUMAN_RUSSIAN   "Pan-Slavic"
+#define LANGUAGE_HUMAN_VESTUS	 "Proto-Vestus"
 
 //Human misc
 #define LANGUAGE_GUTTER         "Gutter"
@@ -23,6 +24,7 @@
 #define LANGUAGE_VOX               "Vox-pidgin"
 #define LANGUAGE_NABBER            "Serpentid"
 #define LANGUAGE_RESOMI            "Schechi"
+#define LANGUAGE_MOLD			   "Protoboletus"
 
 //Antag
 #define LANGUAGE_XENOPHAGE         "Xenophage"

@@ -62,4 +62,3 @@
 
 /datum/trade_category/ntkitchencontract
 	name = "ntkitchencontract"
-
