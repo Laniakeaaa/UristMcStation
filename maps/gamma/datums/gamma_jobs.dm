@@ -1,10 +1,21 @@
 /datum/map/gamma
-	allowed_jobs = list(/datum/job/captain)
+	allowed_jobs = list(/datum/job/debug)
 
 
 /datum/job
 	required_language = LANGUAGE_GALCOM
 
+//////////////////////////////////////
+//			DEBUG		   			//
+//////////////////////////////////////
+
+/datum/job/debug
+	minimal_player_age = 0
+	title = "Debug Testing"
+	department = "Coders"
+	supervisors = "the coffee mug and sleep deprivation."
+	selection_color = "#fb00ff"
+/*
 //////////////////////////////////////
 //			SILICONS	   			//
 //////////////////////////////////////
@@ -69,3 +80,5 @@
 
 /datum/job/submap
 	required_language = null
+
+*/

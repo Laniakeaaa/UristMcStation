@@ -4,11 +4,11 @@
 	path = "gamma"
 
 	lobby_screens = list('maps/gamma/gamma_lobby.dmi')
-	station_levels = list(1,2,3,4,5,6)
-	contact_levels = list (1,2,3,4,5,6)
-	player_levels = list(1,2,3,4,5,6)
-	admin_levels = list(7)
-	empty_levels = list(8)
+	station_levels = list(1,2,3,4,5)
+	contact_levels = list (1,2,3,4,5)
+	player_levels = list(1,2,3,4,5)
+	admin_levels = list(6)
+	empty_levels = list(7)
 	//accessible_z_levels = 'fillthisin'
 	overmap_size = 16
 	overmap_event_areas = 12
