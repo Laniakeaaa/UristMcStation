@@ -159,7 +159,8 @@
 	/singleton/emote/visible/rshoulder,
 	/singleton/emote/visible/squint,
 	/singleton/emote/visible/tfist,
-	/singleton/emote/visible/tilt
+	/singleton/emote/visible/tilt,
+	/singleton/emote/visible/eyerollup
 )
 
 /mob/living/silicon/robot/default_emotes = list(

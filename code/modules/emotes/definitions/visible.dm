@@ -332,3 +332,8 @@
 /singleton/emote/visible/tilt
 	key = "tilt"
 	emote_message_3p = "USER tilts USER_THEIR head."
+
+/singleton/emote/visible/eyerollup
+	key = "eyerollup"
+	emote_message_1p = "You roll your eyes upwards."
+	emote_message_3p = "USER rolls USER_THEIR eyes up into their skull."
