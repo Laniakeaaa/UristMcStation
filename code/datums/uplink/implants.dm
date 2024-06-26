@@ -42,10 +42,9 @@
 	path = /obj/item/storage/box/syndie_kit/imp_imprinting
 	antag_roles = list(MODE_TRAITOR)
 
-/* /datum/uplink_item/item/implants/imp_miu
+datum/uplink_item/item/implants/imp_miu
 	name = "MIU Implant"
 	desc = "An implant that allows you to remotely view any cameras you currently have access to. You will visibily roll your eyes up when you access this."
 	item_cost = 24
 	antag_costs = list(MODE_MERCENARY = 32)
 	path = /obj/item/storage/box/syndie_kit/imp_miu
-*/
