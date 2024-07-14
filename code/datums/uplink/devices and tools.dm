@@ -183,3 +183,9 @@
 	desc = "A single-use device that removes the Clumsy mutation when activated."
 	item_cost = 16
 	path = /obj/item/device/uplink_service/declumsifier
+
+/datum/uplink_item/item/tools/quadruplebarrel
+	name = "Quadruple Barrel Conversion Kit"
+	desc = "A conversion kit that turns your Boomstick into a Quadruple Boomstick."
+	item_cost = 30
+	path = /obj/item/storage/box/syndie_kit/quadrupleconversion

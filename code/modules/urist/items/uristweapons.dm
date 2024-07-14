@@ -316,3 +316,111 @@ Please keep it tidy, by which I mean put comments describing the item before the
 //nerva knife needed to not be called master at arms
 /obj/item/material/knife/folding/swiss/sec/nerva
 	name = "security officer's combi-knife"
+
+/obj/item/gun/projectile/shotgun/doublebarrel/quadruplebarrel
+	name = "quadruple-barreled shotgun"
+	desc = "A quadruple-barreled shotgun, in case you need more boom. Whoever modified this forgot to replace the fireselecter mechanism."
+	icon = 'icons/urist/items/shotguns.dmi'
+	icon_state = "qshotgun"
+	item_state = "dshotgun"
+	item_icons = URIST_ALL_ONMOBS
+	wielded_item_state = "dshotgun-wielded"
+	load_method = SINGLE_CASING|SPEEDLOADER
+	handle_casings = CYCLE_CASINGS
+	max_shells = 4
+	w_class = ITEM_SIZE_HUGE
+	force = 10
+	obj_flags =  OBJ_FLAG_CONDUCTIBLE
+	caliber = CALIBER_SHOTGUN
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 1)
+	ammo_type = /obj/item/ammo_casing/shotgun/pellet
+	one_hand_penalty = 8
+
+	burst_delay = 1 // Slight delay to make up for double the barrels.
+	firemodes = list(
+		list(mode_name="fire one barrel at a time", burst=1),
+		list(mode_name="fire both barrels at once", burst=2), // You can still only fire two at a time.
+		)
+
+/obj/item/gun/projectile/shotgun/doublebarrel/quadsawn
+	name = "quadruple sawn-off shotgun"
+	desc = "A sawn off quadriple barreled shotgun, incredibly impractical and inaccurate, but concealable."
+	icon = 'icons/urist/items/shotgun.dmi'
+	icon_state = "qsawnshotgun"
+	item_state = "qsawnshotgun"
+	item_icons = URIST_ALL_ONMOBS
+	wielded_item_state = "sawnshotgun-wielded"
+	slot_flags = SLOT_BELT // No holster for this.
+	ammo_type = /obj/item/ammo_casing/shotgun/pellet
+	w_class = ITEM_SIZE_NORMAL
+	force = 5
+	one_hand_penalty = 5
+	bulk = 2
+
+/obj/item/gunattachment/barrel/quadrupleconversion
+	icon_state = "quadrupleconversion"
+	name = "quadruple-barrel conversion kit"
+	desc = "A conversion kit with two barrels and a new firing mechanism to turn a double-barrel into a quad-ruple barrel."
+
+/obj/item/storage/box/syndie_kit/quadrupleconversion
+	startswith = list(
+		/obj/item/gunattachment/barrel/quadrupleconversion,
+		/obj/item/wrench)
+
+/obj/item/gun/projectile/shotgun/doublebarrel/attackby(obj/item/I, mob/user)
+	..()
+
+	if(istype(I, /obj/item/gunattachment/barrel/quadrupleconversion))
+		to_chat(user, "<span class='notice'>You carefully attach the second set of barrels to the shotgun.</span>")
+		..()
+
+		/obj/item/gun/projectile/shotgun/doublebarrel/quadruplebarrel
+		scoped_accuracy = 9
+		scope_zoom = 2
+		verbs += /obj/item/gun/proc/scope
+		icon_state = "scopedhuntrifle"
+		item_state = "scopedhuntrifle"
+		wielded_item_state = "scopedhuntrifle2"
+		update_icon()
+		user.remove_from_mob(I)
+		qdel(I)
+
+	else if(istype(I, /obj/item/wrench) && scoped)
+		to_chat(user, "<span class='notice'>You remove the scope from the rifle.</span>")
+		scoped = 0
+		scoped_accuracy = 0
+		scope_zoom = 0
+		verbs -= /obj/item/gun/proc/scope
+		wielded_item_state = "huntrifle2"
+		icon_state = "huntrifle"
+		item_state = "huntrifle"
+		update_icon()
+		new /obj/item/gunattachment/scope/huntrifle(user.loc)
+
+/obj/item/gun/projectile/manualcycle/hunterrifle/on_update_icon()
+	if(scoped)
+		if(bolt_open)
+			icon_state = "scopedhuntrifle_alt"
+		else
+			icon_state = "scopedhuntrifle"
+
+	else if(!scoped)
+		if(bolt_open)
+			icon_state = "huntrifle_alt"
+		else
+			icon_state = "huntrifle"
+
+/obj/item/gun/projectile/manualcycle/hunterrifle/scoped
+	name = "scoped hunting rifle"
+	scoped = 1
+	wielded_item_state = "scopedhuntrifle2"
+	icon_state = "scopedhuntrifle"
+	item_state = "scopedhuntrifle"
+	scoped_accuracy = 9
+	scope_zoom = 2
+
+/obj/item/gunattachment/scope/huntrifle
+	icon_state = "huntriflescope"
+	name = "hunting rifle attachable scope"
+	desc = "A marksman's scope designed to be attached to a hunting rifle."
+	matter = list(DEFAULT_WALL_MATERIAL = 1000,"glass" = 500)
