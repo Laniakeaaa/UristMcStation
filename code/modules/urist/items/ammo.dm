@@ -157,3 +157,131 @@
 	icon = 'icons/urist/items/ammo.dmi'
 	icon_state = "lcasing"
 	spent_icon = "lcasing-spent"
+
+/obj/item/ammo_magazine/speedloader/sks
+
+	name = "stripper clip (7.62mm)"
+	desc = "A stripper clip commonly used for semiautomatic 7.62mm firearms.."
+	icon_state = "pclip" // change
+	caliber = CALIBER_RIFLE
+	ammo_type = /obj/item/ammo_casing/rifle
+	matter = list(MATERIAL_STEEL = 1500)
+	max_ammo = 10
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/varmintrifle
+
+	icon = 'icons/urist/items/ammo.dmi'
+	icon_state = "50ae" // change
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = CALIBER_PISTOL_VARMINT
+	matter = list(MATERIAL_STEEL = 1680)
+	ammo_type = /obj/item/ammo_casing/pistol/varmint
+	max_ammo = 10
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/varmintrifle/extended
+	name = "20-round magazine (.22LR)"
+	desc = "A 20 round detachable magazine, commonly used in varmint rifles."
+	icon = 'icons/urist/items/ammo.dmi'
+	icon_state = "50ae" // change
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = CALIBER_PISTOL_VARMINT
+	matter = list(MATERIAL_STEEL = 1680)
+	ammo_type = /obj/item/ammo_casing/pistol/varmint
+	max_ammo = 20
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/varmintpistol
+	name = "pistol magazine (.22LR)"
+	desc = "A pistol magazine used for .22LR pistols."
+	icon = 'icons/urist/items/ammo.dmi'
+	icon_state = "50ae" // change
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = CALIBER_PISTOL_VARMINT
+	matter = list(MATERIAL_STEEL = 1680)
+	ammo_type = /obj/item/ammo_casing/pistol/varmint
+	max_ammo = 10
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/varmintpistolhp
+	name = "pistol magazine (.22HP)"
+	desc = "A pistol magazine used for .22LR pistols, loaded with hollowpoint."
+	icon = 'icons/urist/items/ammo.dmi'
+	icon_state = "50ae" // change
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = CALIBER_PISTOL_VARMINT
+	matter = list(MATERIAL_STEEL = 1680)
+	ammo_type = /obj/item/ammo_casing/pistol/varmint/hollowpoint
+	max_ammo = 10
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/kolibri
+	name = "pistol magazine (2mm)"
+	desc = "A tiny magazine designed for kolibri pistols."
+	icon = 'icons/urist/items/ammo.dmi'
+	icon_state = "50ae" // change
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = CALIBER_PISTOL_TINY
+	matter = list(MATERIAL_STEEL = 1680)
+	ammo_type = /obj/item/ammo_casing/pistol/kolibri
+	max_ammo = 8
+	multiple_sprites = 1
+
+/obj/item/ammo_casing/nitro_express
+	name = "nitro express casing"
+	desc = "A Nitro Express cartridge."
+	icon = 'icons/urist/items/ammo.dmi'
+	icon_state = "slshell"
+	spent_icon = "slshell-spent"
+	var/global_icon = "slshell-casing"
+	caliber = CALIBER_NITROEXPRESS
+	projectile_type = /obj/item/projectile/bullet/rifle/nitroexpress
+	matter = list(MATERIAL_STEEL = 360)
+	fall_sounds = list('sound/weapons/guns/shotgun_fall.ogg')
+
+/obj/item/ammo_magazine/cycler
+	name = "PDW magazine (4.73mm)"
+	desc = "A caseless PDW magazine.."
+	icon = 'icons/urist/items/ammo.dmi'
+	icon_state = "50ae" // change
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = CALIBER_RIFLE_CASELESS
+	matter = list(MATERIAL_STEEL = 1680)
+	ammo_type = /obj/item/ammo_casing/caseless // change
+	max_ammo = 20
+	multiple_sprites = 1
+
+/obj/item/ammo_casing/pistol/varmint
+	desc = "A small .22LR bullet casing."
+	caliber = CALIBER_PISTOL_SMALL
+	projectile_type = /obj/item/projectile/bullet/varmint
+	icon_state = "smallcasing"
+	spent_icon = "smallcasing-spent"
+
+/obj/item/ammo_casing/pistol/varmint/hollowpoint
+	desc = "A small .22 Hollow Point bullet casing."
+	caliber = CALIBER_PISTOL_SMALL
+	projectile_type = /obj/item/projectile/bullet/varmint/hollowpoint
+	icon_state = "smallcasing"
+	spent_icon = "smallcasing-spent"
+
+/obj/item/ammo_casing/pistol/kolibri
+	desc = "A tiny 2mm pistol bullet casing."
+	caliber = CALIBER_PISTOL_TINY
+	projectile_type = /obj/item/projectile/bullet/pistol/kolibri
+	icon_state = "smallcasing"
+	spent_icon = "smallcasing-spent"
+
+/obj/item/ammo_casing/caseless
+	desc = "a caseless PDW bullet"
+	caliber = CALIBER_RIFLE_CASELESS
+	projectile_type = /obj/item/projectile/bullet/caseless
+	icon_state = "smallcasing"
+	spent_icon = "smallcasing-spent"

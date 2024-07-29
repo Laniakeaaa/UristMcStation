@@ -681,29 +681,6 @@ the sprite and make my own projectile -Glloyd*/
 			qdel(src)
 		return
 	..()
-/*
-/obj/item/gun/projectile/revolver/shotrevolver
-	name = "shot revolver"
-	desc = "The Lumoco Arms HE Colt is a choice revolver for when you absolutely, positively need to put a hole in the other guy. Uses .357 ammo."
-	icon_state = "revolver"
-	item_state = "revolver"
-	caliber = "shotgun"
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 1)
-	handle_casings = CYCLE_CASINGS
-	max_shells = 4
-	ammo_type = /obj/item/ammo_casing/shotgun
-
-
-/obj/item/gun/projectile/revolver/shotrevolver/consume_next_projectile()
-	if(chamber_offset)
-		chamber_offset--
-		return
-	return ..()
-
-/obj/item/gun/projectile/revolver/shotrevolver/load_ammo(obj/item/A, mob/user)
-	chamber_offset = 0
-	return ..()
-*/
 
 /obj/item/gun/projectile/manualcycle/mosinnagant
 	item_icons = DEF_URIST_INHANDS
@@ -725,15 +702,7 @@ the sprite and make my own projectile -Glloyd*/
 //	accuracy = -1
 //	jam_chance = 5
 	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
-/*
-/obj/item/gun/projectile
-	name = ""
-	desc = ""
-	icon = 'icons/urist/items/guns.dmi'
-	icon_state = ""
-	caliber = "pistol"
-	ammo_type = /obj/item/ammo_casing/pistol
-*/
+
 
 
 //nerva guns
@@ -948,3 +917,141 @@ the sprite and make my own projectile -Glloyd*/
 	desc = "a pre-Crisis model laser carbine formerly deployed broadly by human forces."
 	icon = 'icons/urist/items/guns.dmi'
 	icon_state = "oldlaser"
+
+/obj/item/gun/projectile/sks
+	name = "SKS"
+	desc = "An antique semi-automatic rifle seemingly well preserved with cosmoline. Outdated by today's standards, but remains popular as a cheap rifle for hunting and in revolutionary circles."
+	icon = 'icons/urist/items/guns.dmi'
+	item_icons = DEF_URIST_INHANDS
+	icon_state = "" // add later
+	item_state = "" // add later
+	wielded_item_state = "" // add later
+	w_class = 5
+	force = 10
+	caliber = CALIBER_RIFLE
+	origin_tech = "combat=3,materials=2"
+	slot_flags = SLOT_BACK
+	load_method = SPEEDLOADER
+	magazine_type = /obj/item/ammo_magazine/speedloader/sks
+	allowed_magazines = /obj/item/ammo_magazine/speedloader/sks
+	one_hand_penalty = 5
+	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
+	jam_chance = 1
+
+/obj/item/gun/projectile/automatic/cycler
+	item_icons = DEF_URIST_INHANDS
+	name = "\improper Cycler PDW"
+	desc = "A compact caseless bullpup PDW, fed with a transparent plastic magazine to the rear. Gained significant popularity in vehicle crewmen roles thanks to it's easy recoil control and low profile."
+	icon = 'icons/urist/items/guns.dmi' // change later
+	icon_state = "combatSMG" // change later
+	item_state = "combatSMG" // change later
+	wielded_item_state = "combatSMG"  // change later
+	w_class = 4
+	force = 10
+	caliber = CALIBER_RIFLE_CASELESS
+	origin_tech = "combat=4;materials=1;syndicate=1"
+	slot_flags = SLOT_BELT
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/cycler
+	allowed_magazines = /obj/item/ammo_magazine/cycler
+	one_hand_penalty = 4
+	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
+	jam_chance = 0
+
+// Change these later when we test.
+	firemodes = list(
+		list(mode_name="semiauto", burst=1, fire_delay=0, one_hand_penalty = 1, move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="short bursts", 	burst=5, move_delay=6, fire_delay=null, one_hand_penalty = 3, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		)
+
+/obj/item/gun/projectile/varmintrifle
+	name = "varmint rifle"
+	desc = "A varmint rifle commonly used for hunting rodents and plinking beercans in the desert, loaded in .22 Long Rifle."
+	icon = 'icons/urist/items/guns.dmi'
+	item_icons = DEF_URIST_INHANDS
+	icon_state = "" // add later
+	item_state = "" // add later
+	wielded_item_state = "" // add later
+	w_class = 3
+	force = 12
+	caliber = CALIBER_PISTOL_VARMINT
+	origin_tech = "combat=1,materials=1"
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/varmintrifle
+	allowed_magazines = /obj/item/ammo_magazine/varmintrifle
+	one_hand_penalty = 4
+	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
+	jam_chance = 0
+
+/obj/item/gun/projectile/hush22
+	item_icons = URIST_ALL_ONMOBS
+	name = "\improper Hush .22 Special"
+	desc = "An integrally surpressed .22 Long Rifle pistol with a comfortable grip, the serial tag has been manually filed away and no markings are visible."
+	icon = 'icons/urist/items/guns.dmi'
+	icon_state = "crewpistol" // change later
+	item_state = "crewpistol" // change later
+	wielded_item_state = "crewpistol" // change later
+	w_class = 2
+	caliber = CALIBER_PISTOL_VARMINT
+	origin_tech = "combat=3;materials=2;syndicate=1"
+	slot_flags = SLOT_BELT | SLOT_HOLSTER
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/varmintpistol
+	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg' // surpressor time
+
+/obj/item/gun/projectile/pocketderringer
+	item_icons = URIST_ALL_ONMOBS
+	name = "\improper Pocket Derringer"
+	desc = "A small pocket pistol, easily concealable for quick draw and firing, famously used for assassinating an ancient Sol president."
+	icon = 'icons/urist/items/guns.dmi'
+	icon_state = "crewpistol" // change later
+	item_state = "crewpistol" // change later
+	wielded_item_state = "crewpistol" // change later
+	w_class = 1
+	caliber = CALIBER_PISTOL_MEDIUM
+	handle_casings = HOLD_CASINGS
+	origin_tech = "combat=3;materials=2;syndicate=1"
+	slot_flags = SLOT_BELT | SLOT_HOLSTER | SLOT_POCKET | SLOT_EARS | SLOT_TIE
+	load_method = SINGLE_CASING
+	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg' // change to smaller sounding
+	item_flags = ITEM_FLAG_CAN_HIDE_IN_SHOES
+
+/obj/item/gun/projectile/nitroexpress
+	name = "Nitro Express"
+	desc = "A gigantic elephant gun commonly used for putting down megafauna over a great distance provided you can handle the recoil, perfect for big-game hunting bald assistants."
+	icon = 'icons/urist/items/guns.dmi'
+	item_icons = DEF_URIST_INHANDS
+	icon_state = "" // add later
+	item_state = "" // add later
+	wielded_item_state = "" // add later
+	w_class = 8
+	force = 15
+	caliber = CALIBER_NITROEXPRESS // nitro
+	origin_tech = "combat=3,materials=2"
+	slot_flags = SLOT_BACK
+	load_method = SINGLE_CASING
+	magazine_type = /obj/item/ammo_casing/nitro_express
+	allowed_magazines = /obj/item/ammo_casing/nitro_express
+	one_hand_penalty = 10
+	screen_shake = 10
+	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg' // make this more
+	jam_chance = 0
+
+
+/obj/item/gun/projectile/kolibiri   // admin only fun
+	item_icons = URIST_ALL_ONMOBS
+	name = "\improper Kolibri Pistol"
+	desc = "A tiny pistol capable of firing the equally tiny 2mm bullet. Killing anyone with this is an achievement in itself."
+	icon = 'icons/urist/items/guns.dmi'
+	icon_state = "crewpistol" // change later
+	item_state = "crewpistol" // change later
+	wielded_item_state = "crewpistol" // change later
+	w_class = 1
+	caliber = CALIBER_PISTOL_TINY
+	origin_tech = "combat=3;materials=2;syndicate=1"
+	slot_flags = SLOT_BELT | SLOT_HOLSTER | SLOT_POCKET
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/kolibri
+	allowed_magazines = /obj/item/ammo_magazine/kolibri
+	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg' // change to smaller sounding

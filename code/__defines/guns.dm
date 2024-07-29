@@ -1,17 +1,22 @@
 #define CALIBER_PISTOL 			"10mm"
 #define CALIBER_PISTOL_SMALL 	"9mm"
-#define CALIBER_PISTOL_MAGNUM 	"15mm"
+#define CALIBER_PISTOL_MEDIUM   ".45 ACP"
+#define CALIBER_PISTOL_MAGNUM 	".357"
 #define CALIBER_PISTOL_FLECHETTE "4mm"
 #define CALIBER_PISTOL_ANTIQUE	"~10mm"
+#define CALIBER_PISTOL_VARMINT  "22LR"
+#define CALIBER_PISTOL_TINY     "2mm"
 
 #define CALIBER_RIFLE			"7.62mm"
 #define CALIBER_RIFLE_MILITARY  "5.56mm"
 #define CALIBER_ANTIMATERIAL    "14.5"
+#define CALIBER_RIFLE_CASELESS  "4.73mm"
 
 #define CALIBER_SHOTGUN			"12g"
 #define CALIBER_GYROJET			"20mmG"
 #define CALIBER_CAPS			"caps"
 #define CALIBER_DART			"darts"
+#define CALIBER_NITROEXPRESS  ".500 Nitro Express"
 
 #define HOLD_CASINGS	0 //do not do anything after firing. Manual action, like pump shotguns, or guns that want to define custom behaviour
 #define CLEAR_CASINGS	1 //clear chambered so that the next round will be automatically loaded and fired, but don't drop anything on the floor
@@ -29,8 +34,18 @@
 #define BULLET_IMPACT_NONE  "none"
 #define BULLET_IMPACT_METAL "metal"
 #define BULLET_IMPACT_MEAT  "meat"
+#define BULLET_IMPACT_WOOD  "wood"
+#define BULLET_IMPACT_CERAMIC "ceramic"
+#define BULLET_IMPACT_PAPER "paper"
+#define BULLET_IMPACT_WATER "water"
+#define BULLET_IMPACT_SAND "sand"
+#define BULLET_IMPACT_GRASS "grass"
+#define BULLET_IMPACT_PLASTIC "plastic"
+#define BULLET_IMPACT_GLASS "glass"
 
 #define SOUNDS_BULLET_MEAT  list('sound/effects/projectile_impact/bullet_meat1.ogg', 'sound/effects/projectile_impact/bullet_meat2.ogg', 'sound/effects/projectile_impact/bullet_meat3.ogg', 'sound/effects/projectile_impact/bullet_meat4.ogg')
 #define SOUNDS_BULLET_METAL  list('sound/effects/projectile_impact/bullet_metal1.ogg', 'sound/effects/projectile_impact/bullet_metal2.ogg', 'sound/effects/projectile_impact/bullet_metal3.ogg')
 #define SOUNDS_LASER_MEAT  list('sound/effects/projectile_impact/energy_meat1.ogg','sound/effects/projectile_impact/energy_meat2.ogg')
 #define SOUNDS_LASER_METAL  list('sound/effects/projectile_impact/energy_metal1.ogg','sound/effects/projectile_impact/energy_metal2.ogg')
+
+// TODO --- Add defines for laser and bullet here for new impacts.

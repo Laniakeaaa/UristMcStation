@@ -149,6 +149,20 @@
 	damage = 40
 	armor_penetration = 15
 
+/obj/item/projectile/bullet/varmint
+	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
+	damage = 20
+	distance_falloff = 2
+
+/obj/item/projectile/bullet/varmint/hollowpoint
+	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
+	damage = 45
+	distance_falloff = 2
+	armor_penetration = 1.5
+
+/obj/item/projectile/bullet/pistol/kolibri // Better than nothing right?
+	damage = 3
+
 /obj/item/projectile/bullet/pistol/rubber //"rubber" bullets
 	name = "rubber bullet"
 	damage_flags = 0
@@ -253,6 +267,26 @@
 	penetrating = 5
 	armor_penetration = 80
 	penetration_modifier = 1.5
+
+/obj/item/projectile/bullet/caseless //762
+	fire_sound = 'sound/weapons/gunshot/gunshot3.ogg'
+	damage = 30
+	armor_penetration = 20
+	penetration_modifier = 1
+	penetrating = 1
+	distance_falloff = 1.2
+
+/obj/item/projectile/bullet/rifle/nitroexpress //14.5mm
+	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
+	damage = 80
+	stun = 2
+	weaken = 2
+	penetrating = 1
+	armor_penetration = 70
+	penetration_modifier = 1.3
+	distance_falloff = 0.8
+
+/obj/item_/
 
 /* Miscellaneous */
 /obj/item/projectile/bullet/gyro
