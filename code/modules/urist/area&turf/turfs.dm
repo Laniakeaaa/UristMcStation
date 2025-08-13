@@ -4,21 +4,15 @@ Basically, if you need to add turfs for UMcS, use this file -Glloyd */
 
 
 /*TURFS
-********I SWEAR, IF ANYONE FUCKS WITH THIS, I WILL KILL YOU. -Glloyd******** //oh man, i don't even know why I was pissed anymore
+********I SWEAR, IF ANYONE FUCKS WITH THIS, I WILL KILL YOU. -Glloyd******** //oh man, i don't even know why I was pissed anymore // time to start fucking with it - lania
+// ill be real i have no clue why this shit is different dawg - lania
 
 Icons for uristturfs from Nienhaus, Glloyd and Lord Slowpoke*/
 
-/turf/simulated/floor/fixed/uristturf
-	name = "floor"
-	icon = 'icons/urist/turf/uristturf.dmi'
-	icon_state = "yellowdiag02"
+// Rewrote Urist Turf stuff since it's quite ancient at this point - Lania
 
-//unsimulated version
 
-/turf/unsimulated/floor/uristturf
-	name = "floor"
-	icon = 'icons/urist/turf/uristturf.dmi'
-	icon_state = "yellowdiag02"
+
 
 //rails
 
@@ -41,42 +35,6 @@ Icons for uristturfs from Nienhaus, Glloyd and Lord Slowpoke*/
 /turf/simulated/floor/plating/airless
 	initial_gas = null
 
-/*//Space! Because fuck /tg/!
-transit/east is the same thing now AFAIK
-/turf/space/transit/west // moving to the west
-	icon = 'icons/urist/turf/uristturf.dmi'
-	pushdirection = EAST
-
-	shuttlespace_ew1
-		icon_state = "speedspace_ew_1"
-	shuttlespace_ew2
-		icon_state = "speedspace_ew_2"
-	shuttlespace_ew3
-		icon_state = "speedspace_ew_3"
-	shuttlespace_ew4
-		icon_state = "speedspace_ew_4"
-	shuttlespace_ew5
-		icon_state = "speedspace_ew_5"
-	shuttlespace_ew6
-		icon_state = "speedspace_ew_6"
-	shuttlespace_ew7
-		icon_state = "speedspace_ew_7"
-	shuttlespace_ew8
-		icon_state = "speedspace_ew_8"
-	shuttlespace_ew9
-		icon_state = "speedspace_ew_9"
-	shuttlespace_ew10
-		icon_state = "speedspace_ew_10"
-	shuttlespace_ew11
-		icon_state = "speedspace_ew_11"
-	shuttlespace_ew12
-		icon_state = "speedspace_ew_12"
-	shuttlespace_ew13
-		icon_state = "speedspace_ew_13"
-	shuttlespace_ew14
-		icon_state = "speedspace_ew_14"
-	shuttlespace_ew15
-		icon_state = "speedspace_ew_15"*/
 
 //entryscreen for UMcS, done by Glloyd.
 
@@ -332,3 +290,44 @@ transit/east is the same thing now AFAIK
 
 /turf/simulated/floor/tiled/white/airless
 	map_airless = TRUE
+
+/* Legacy shit that was commented out already
+
+/*//Space! Because fuck /tg/!
+transit/east is the same thing now AFAIK
+/turf/space/transit/west // moving to the west
+	icon = 'icons/urist/turf/uristturf.dmi'
+	pushdirection = EAST
+
+	shuttlespace_ew1
+		icon_state = "speedspace_ew_1"
+	shuttlespace_ew2
+		icon_state = "speedspace_ew_2"
+	shuttlespace_ew3
+		icon_state = "speedspace_ew_3"
+	shuttlespace_ew4
+		icon_state = "speedspace_ew_4"
+	shuttlespace_ew5
+		icon_state = "speedspace_ew_5"
+	shuttlespace_ew6
+		icon_state = "speedspace_ew_6"
+	shuttlespace_ew7
+		icon_state = "speedspace_ew_7"
+	shuttlespace_ew8
+		icon_state = "speedspace_ew_8"
+	shuttlespace_ew9
+		icon_state = "speedspace_ew_9"
+	shuttlespace_ew10
+		icon_state = "speedspace_ew_10"
+	shuttlespace_ew11
+		icon_state = "speedspace_ew_11"
+	shuttlespace_ew12
+		icon_state = "speedspace_ew_12"
+	shuttlespace_ew13
+		icon_state = "speedspace_ew_13"
+	shuttlespace_ew14
+		icon_state = "speedspace_ew_14"
+	shuttlespace_ew15
+		icon_state = "speedspace_ew_15"*/
+
+*/
